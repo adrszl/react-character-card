@@ -29,10 +29,10 @@ class Abilities extends Component {
         <li 
           id={`ability${index}`} 
           key={`ability${index}`}
-          className={`list-group-item ability-${this.state.active == ("ability" + index) ? "active" : "hidden"}`}
+          className={`list-group-item ability-${this.state.active === ("ability" + index) ? "active" : "hidden"}`}
           onClick={(event) => this.handleClick(event)} >
             <p><span className="ability__title">{ability}</span></p>
-            <p className="ability-prop-container"><span className={`ability-props ability-${this.state.active == ("ability" + index) ? "active" : "hidden"}`}>
+            <p className="ability-prop-container"><span className={`ability-props ability-${this.state.active === ("ability" + index) ? "active" : "hidden"}`}>
               {this.props.abilitiesDescription[ability]}
             </span></p>
         </li> );
