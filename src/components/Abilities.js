@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 class Abilities extends Component {
   constructor(props) {
@@ -9,7 +9,9 @@ class Abilities extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
   
-  handleClick(id) {
+  handleClick(event) {
+    const { id } = event.target;
+
     if (this.state.active === id && id !== '') {
       this.setState({ active: '' });
     } else if (this.state.active === '' && id === '') {
@@ -28,7 +30,7 @@ class Abilities extends Component {
           id={`ability${index}`} 
           key={`ability${index}`}
           className={`list-group-item ability-${this.state.active == ("ability" + index) ? "active" : "hidden"}`}
-          onClick={(event) => this.handleClick(event.target.id)} >
+          onClick={(event) => this.handleClick(event)} >
             <p><span className="ability__title">{ability}</span></p>
             <p className="ability-prop-container"><span className={`ability-props ability-${this.state.active == ("ability" + index) ? "active" : "hidden"}`}>
               {this.props.abilitiesDescription[ability]}

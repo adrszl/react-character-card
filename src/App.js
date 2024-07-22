@@ -1,4 +1,15 @@
+import React from 'react';
+
+import Abilities from './components/Abilities';
+import CurrentPoints from './components/CurrentPoints';
+import Dices from './components/Dices';
+import Equipment from './components/Equipment';
+import Graphics from './components/Graphics';
+import Skills from './components/Skills';
+import Stats from './components/Stats';
+
 import './App.css';
+
 
 class App extends React.Component {
   constructor(props) {

@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 class Stats extends Component {
   constructor(props) {
     super(props);
-    this.state = {},
+    this.state = {};
     this.handleClick = this.handleClick.bind(this);
     this.dicesRoll = this.dicesRoll.bind(this);
   }
   
-  handleClick(statValue) {
+  handleClick(event, statValue) {
     let element = event.target;
     let rollResult = this.dicesRoll();
     if(element.classList.contains('list-group-item')) {
@@ -34,14 +34,14 @@ class Stats extends Component {
         <div className="card-body">
           <h5 className="card-title text-center">Statystyki</h5>
           <ul className="list-group">
-            <li className="list-group-item" onClick={() => this.handleClick(this.props.stats.ww)}>WW: <span className="font-weight-bold">{this.props.stats.ww}</span></li>
-            <li className="list-group-item" onClick={() => this.handleClick(this.props.stats.us)}>US: <span className="font-weight-bold">{this.props.stats.us}</span></li>
-            <li className="list-group-item" onClick={() => this.handleClick(this.props.stats.k)}>K: <span className="font-weight-bold">{this.props.stats.k}</span></li>
-            <li className="list-group-item" onClick={() => this.handleClick(this.props.stats.odp)}>Odp: <span className="font-weight-bold">{this.props.stats.odp}</span></li>
-            <li className="list-group-item" onClick={() => this.handleClick(this.props.stats.zr)}>Zr: <span className="font-weight-bold">{this.props.stats.zr}</span></li>
-            <li className="list-group-item" onClick={() => this.handleClick(this.props.stats.int)}>Int: <span className="font-weight-bold">{this.props.stats.int}</span></li>
-            <li className="list-group-item" onClick={() => this.handleClick(this.props.stats.sw)}>Sw: <span className="font-weight-bold">{this.props.stats.sw}</span></li>
-            <li className="list-group-item" onClick={() => this.handleClick(this.props.stats.ogd)}>Ogd: <span className="font-weight-bold">{this.props.stats.ogd}</span></li>
+            <li className="list-group-item" onClick={(event) => this.handleClick(event, this.props.stats.ww)}>WW: <span className="font-weight-bold">{this.props.stats.ww}</span></li>
+            <li className="list-group-item" onClick={(event) => this.handleClick(event, this.props.stats.us)}>US: <span className="font-weight-bold">{this.props.stats.us}</span></li>
+            <li className="list-group-item" onClick={(event) => this.handleClick(event, this.props.stats.k)}>K: <span className="font-weight-bold">{this.props.stats.k}</span></li>
+            <li className="list-group-item" onClick={(event) => this.handleClick(event, this.props.stats.odp)}>Odp: <span className="font-weight-bold">{this.props.stats.odp}</span></li>
+            <li className="list-group-item" onClick={(event) => this.handleClick(event, this.props.stats.zr)}>Zr: <span className="font-weight-bold">{this.props.stats.zr}</span></li>
+            <li className="list-group-item" onClick={(event) => this.handleClick(event, this.props.stats.int)}>Int: <span className="font-weight-bold">{this.props.stats.int}</span></li>
+            <li className="list-group-item" onClick={(event) => this.handleClick(event, this.props.stats.sw)}>Sw: <span className="font-weight-bold">{this.props.stats.sw}</span></li>
+            <li className="list-group-item" onClick={(event) => this.handleClick(event, this.props.stats.ogd)}>Ogd: <span className="font-weight-bold">{this.props.stats.ogd}</span></li>
           </ul>
           <ul className="list-group mt-3">
             <li className="list-group-item">A: <span className="font-weight-bold">{this.props.stats.a}</span></li>
