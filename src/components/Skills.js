@@ -60,10 +60,10 @@ class Skills extends Component {
           key={`skill${index}`} 
           className="list-group-item skill"
           onClick={(event) => this.handleSkillClick(event, index)}>
-          {skill}
-          <p className="justify-content-between">
-            <span>Modyfikator:</span>
-            <span>
+          <strong>{skill}</strong>
+          <p className="mt-2">
+            <span className='me-2'>Modyfikator:</span>
+            <span className='me-2'>
               <input 
                 className="stats-value-input" 
                 value={this.state.activeIndex === index ? this.state.modifierValue : ''} 
@@ -71,13 +71,13 @@ class Skills extends Component {
             </span>
             <button 
               type="button" 
-              className={`btn btn-outline-secondary ${this.state.modifierType === '+' && this.state.activeIndex === index ? 'active' : ''}`} 
+              className={`btn btn-outline-secondary ${this.state.modifierType === '+' && this.state.activeIndex === index ? 'active' : ''} me-2`} 
               onClick={() => this.handleClick('+', index)}>
               +
             </button>
             <button 
               type="button" 
-              className={`btn btn-outline-secondary ${this.state.modifierType === '-' && this.state.activeIndex === index ? 'active' : ''}`}
+              className={`btn btn-outline-secondary ${this.state.modifierType === '-' && this.state.activeIndex === index ? 'active' : ''} me-2`}
               onClick={() => this.handleClick('-', index)}>
               -
             </button>
