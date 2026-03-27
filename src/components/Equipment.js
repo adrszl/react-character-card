@@ -8,7 +8,7 @@ function Equipment(props) {
   }
   
   return(
-    <div className="card col-12 col-sm-auto my-4">
+    <div className="card col-12 col-sm-auto my-4 shadow">
       <div className="card-body">
         <h5 className="card-title">Ekwipunek</h5>
         <ul className="list-group">

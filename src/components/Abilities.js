@@ -38,7 +38,7 @@ class Abilities extends Component {
         </li> );
     });
     return (
-      <div className="card col-12 col-sm-5 my-4 my-sm-0">
+      <div className="card col-12 col-sm-5 my-4 my-sm-0 shadow">
         <div className="card-body">
           <h5 className="card-title text-center">Zdolności</h5>
           <ul className="list-group">

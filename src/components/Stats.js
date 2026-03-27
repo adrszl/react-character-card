@@ -30,7 +30,7 @@ class Stats extends Component {
   
   render() {
     return (
-      <div className="card col-12 col-sm-2 my-4 my-sm-0">
+      <div className="card col-12 col-sm-2 my-4 my-sm-0 shadow">
         <div className="card-body">
           <h5 className="card-title text-center">Statystyki</h5>
           <ul className="list-group">

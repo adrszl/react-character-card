@@ -95,7 +95,7 @@ class Skills extends Component {
       );
     });
     return (
-      <div className="card col-12 col-sm-5 my-4 my-sm-0">
+      <div className="card col-12 col-sm-4 my-4 my-sm-0 shadow">
         <div className="card-body">
           <h5 className="card-title text-center">Umiejętności</h5>
           <ul className="list-group">
