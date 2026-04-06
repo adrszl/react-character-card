@@ -36,7 +36,9 @@ class Skills extends Component {
     this.setState({ modifierValue: event.target.value });
   }
   
-  handleClick(type, elementIndex) {
+  handleClick(e, type, elementIndex) {
+    e.stopPropagation();
+
     if(type === '+') {
       this.setState({ modifierType: '+', activeIndex: elementIndex });
     } else if (type === '-') {
@@ -72,19 +74,19 @@ class Skills extends Component {
             <button 
               type="button" 
               className={`btn btn-outline-secondary ${this.state.modifierType === '+' && this.state.activeIndex === index ? 'active' : ''} me-2`} 
-              onClick={() => this.handleClick('+', index)}>
+              onClick={(e) => this.handleClick(e, '+', index)}>
               +
             </button>
             <button 
               type="button" 
               className={`btn btn-outline-secondary ${this.state.modifierType === '-' && this.state.activeIndex === index ? 'active' : ''} me-2`}
-              onClick={() => this.handleClick('-', index)}>
+              onClick={(e) => this.handleClick(e, '-', index)}>
               -
             </button>
             <button 
               type="button" 
               className={'btn btn-outline-success'}
-              onClick={() => this.handleClick('test')}>
+              onClick={(e) => this.handleClick(e, 'test')}>
               Test
             </button>
           </p>
