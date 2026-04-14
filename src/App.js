@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Abilities from './components/Abilities';
 import CurrentPoints from './components/CurrentPoints';
 import Dices from './components/Dices';
@@ -107,8 +106,10 @@ class App extends React.Component {
           <CurrentPoints currentPoints={this.state.currentPoints} />
           <Equipment equipment={this.state.equipment} money={this.state.money} />
           <div className="card col-12 col-sm-auto my-4 shadow d-flex flex-column justify-content-around">
-            <Graphics />
-            <Dices />
+            <div className="card-body">
+              <Graphics />
+              <Dices />
+            </div>
           </div>
         </div>
       </div>
