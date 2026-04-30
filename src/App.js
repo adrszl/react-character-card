@@ -112,6 +112,9 @@ class App extends React.Component {
             </div>
           </div>
         </div>
+        <footer>
+          <a href="https://adrian-szlegel-personal-projects.netlify.app/" target="_blank" rel="noopener noreferrer">Check all my other React projects</a>
+        </footer>
       </div>
     );
   }
